@@ -16,7 +16,7 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   if ( edad >= 18 ){
-    return "allowed";
+    return "Allowed";
   }else{
     return "Not allowed";
   }
@@ -47,11 +47,11 @@ function saludo(idioma) {
   if (idioma === "aleman"){
     return "Guten Tag!";
   }else if (idioma === "mandarin"){
-    return "Ni Hao";
+    return "Ni Hao!";
   }else if (idioma === "ingles"){
-    return " Hello";
+    return "Hello!";
   }else{
-    return "hola";
+    return "Hola!";
   }
 }
 
@@ -107,16 +107,15 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 3 === 0){
+  if (numero % 3 === 0)
     return "fizz";
-  }else if (numero % 5 === 0){
+  if (numero % 5 === 0)
     return "buzz"
-  }else if (numero % 15 === 0){
+  if (numero % 15 === 0)
     return "fizzbuzz";
-  }else{
     return numero 
   }
-}
+
 function operadoresLogicos(num1, num2, num3) {
   //La función recibe tres números distintos. 
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
@@ -124,17 +123,21 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if ( num1 > num2 && num1 > num3 && num1 > 0){
+ if(num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  else if(num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
+  }
+  else if(num1 > 0 && num1 > num2 && num1 > num3) {
     return "Número 1 es mayor y positivo";
-  }else if (num1 < 0 || num2 < 0 || num3 < 0){
-    return "Hay negativos"
-    }else if (num3 > num1 && num3 > num2){
-      return num3 + 1
-    }else if(num1 === 0 || num2 === 0 || num3 === 0) {
-      return "Error";
-    }else{
-      return false
-     }
+  }
+  else if(num3 > num1 && num3 > num2) {
+    return num3 + 1;
+  }
+  else {
+    return false;
+  }
 }
 
 function esPrimo(numero) {
@@ -194,12 +197,12 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
 let i = 0;
 let resultado = numero
-do{
-  resultado += 5
-  i += 1
-}
-while (i < 9);
-return resultado
+  do{
+    resultado += 5
+    i += 1
+  }
+  while (i < 8);
+  return resultado
 }
 
 
