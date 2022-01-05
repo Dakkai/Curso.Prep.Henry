@@ -7,7 +7,7 @@ const nuevaString = "hola";
 const nuevoNum = 1;
 
 // Crea una variable booleana:
-const nuevoBool = True;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -74,7 +74,7 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num > 90
+  return num < 90
 }
 
 function mayorQueCincuenta(num) {
@@ -132,13 +132,13 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return Math.floor(num)
+  return Math.ceil(num)
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random
+  return Math.random()
 }
 
 function esPositivo(numero) {
@@ -147,9 +147,9 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if (numero < 0){
-    return "es negativo"
+    return "Es negativo"
   }else if (numero > 0){
-    return "es positivo"
+    return "Es positivo"
   }else{
     return false
   }
@@ -173,7 +173,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola " + nombre
+  return "Hola " + nombre + "!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
